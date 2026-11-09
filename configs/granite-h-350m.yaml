@@ -1,0 +1,42 @@
+# The phone first candidate: about 265 MB at q4 with the runtime, which installs on an iPhone.
+name: granite-h-350m-health-v0
+
+base:
+  repo: ibm-granite/granite-4.0-h-350m
+  revision: 3b17b717b8f2f5d305b0a92c1491e239aeda19c8   # read from the Hugging Face API, 2026-11-09
+  licence: Apache-2.0
+  model_type: granitemoehybrid   # hybrid Mamba2 and attention: export at q4, never q4f16
+  published_onnx: onnx-community/granite-4.0-h-350m-ONNX@06653818ebf090337d196df49a805d83ec0d211b
+
+data:
+  train: data/train.jsonl
+  sources: data/sources.yaml
+
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: all-linear
+
+training:
+  epochs: 3
+  learning_rate: 2.0e-4
+  batch_size: 8
+  gradient_accumulation: 2
+  max_length: 1024
+  bf16: true
+  seed: 42
+  output_dir: runs/granite-h-350m-health-v0
+
+export:
+  dtype: q4
+
+manifest:
+  repo: metacareforyou/granite-4.0-h-350m-health-ONNX   # the Hugging Face repository the weights are published to; not created yet
+  license: Apache 2.0
+  cache_name: metacare-localai-chat-granite-h-350m-health-v0
+  disclosure:
+    name: MetaCare Health 350M (Granite 4.0 H 350M, fine tuned)
+    maker: MetaCare, from IBM Granite
+    license: Apache 2.0
+    url: https://github.com/metacareforyou/metacare-small-model
