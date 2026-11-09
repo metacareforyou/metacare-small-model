@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "metacare-small-model"
+version = "0.1.0"
+description = "Fine tune, evaluate and export a small open health model that runs in a phone's browser."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Metacare.ai Inc.", email = "info@metacare.ai" }]
+requires-python = ">=3.11"
+# The core install has one dependency so the data checks, the manifest builder and the tests run anywhere,
+# on any laptop, with no GPU. The heavy stacks are opt in extras.
+dependencies = ["pyyaml>=6.0"]
+
+[project.optional-dependencies]
+train = [
+  "torch>=2.5",
+  "transformers>=4.57",
+  "peft>=0.17",
+  "trl>=0.23",
+  "datasets>=4.0",
+  "accelerate>=1.10",
+]
+export = [
+  "optimum[onnxruntime]>=1.27",
+  "onnx>=1.19",
+  "onnxruntime>=1.23",
+]
+dev = ["pytest>=8.3", "ruff>=0.13"]
+
+[project.scripts]
+msm = "metacare_small_model.cli:main"
+
+[project.urls]
+Homepage = "https://metacare.ai"
+Source = "https://github.com/metacareforyou/metacare-small-model"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+metacare_small_model = ["prompts/*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
