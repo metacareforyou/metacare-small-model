@@ -30,7 +30,7 @@ file's size and SHA 256, runs it in a web worker, and never falls back to a serv
 |---|---|---|
 | SmolLM3 3B | about 2.1 GB | Refused on iPhone: iOS closed a page holding 1.5 GB |
 | Granite 4.0 H 1B | about 1.0 GB | Would not install on an iPhone; Chrome on a test Mac refused to cache the single 1 GB file |
-| Granite 4.0 H 350M | about 265 MB | Installs on an iPhone; on a desktop browser with WebGPU it answered a Spanish translation in 15 seconds; on the iPhone its first answer never came back (now stopped after five minutes with the reason shown) |
+| Granite 4.0 H 350M | about 265 MB | Installs on an iPhone; on a desktop browser with WebGPU it answered a Spanish translation in 15 seconds; on an iPhone 18 it has answered (November 9, 2026), while an earlier iPhone test timed out; answer time on phones is not yet measured |
 
 The goal of this repository is a fine tuned model at the 350M size class (or a 1B model squeezed under the phone
 budget) that a clinician would be comfortable sending to a patient as written.
@@ -216,8 +216,9 @@ Stated plainly, so nobody discovers them on a phone:
    `optimum` exports a fine tuned `granitemoehybrid` model with its Mamba state cache in the shape Transformers.js
    4.3.1 expects is untested. `msm export --check-against` compares graph inputs and outputs with the published file
    to catch a mismatch early; if it differs, the conversion needs onnx-community's method instead.
-2. **Whether the 350M model can answer on an iPhone in time.** It installs; its first answer did not return. The app
-   now reports why an answer failed, and that reason, read from a real phone, decides whether the problem is speed or
+2. **How fast the 350M model answers on phones.** It installs on an iPhone and has answered on an iPhone 18, but an
+   earlier iPhone test never returned an answer, and answer time has not been measured on any phone. The app stops an
+   answer after five minutes and shows the reason, so a failure on a given phone says whether the problem is speed or
    memory.
 3. **Whether 350M parameters are enough** for answers a clinician would send. That is what the evaluation is for.
 4. **The 1B model on a phone** needs either a smaller quantization or the model split across files under the browser's
@@ -229,7 +230,7 @@ Stated plainly, so nobody discovers them on a phone:
 - [ ] Clinician reviewers named and the rubric's pass bar agreed
 - [ ] First few hundred reviewed records in English and Spanish
 - [ ] First 350M run, evaluated, and the export verified against the app on desktop browsers
-- [ ] The same answer read back from a real iPhone and a real Android phone
+- [ ] Answer time measured on iPhone and Android phones (the base 350M has answered once on an iPhone 18)
 - [ ] Weights, recipe and evaluation set published openly with a model card
 - [ ] The on device path offered in production after the clinician review (MET-1385)
 
