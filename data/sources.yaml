@@ -1,0 +1,12 @@
+# Every training record and evaluation item names one of these sources. A record whose source is not here, or whose
+# licence is not on the allow list in src/metacare_small_model/records.py, is refused by `msm data check`.
+#
+# Before adding a source: read its terms in full, save a copy of the terms page, and record its SHA 256 below.
+# Patient records, chat logs, forum posts and anything a person wrote about their own health are never sources.
+sources:
+  - id: metacare-authored
+    name: Written by MetaCare for this dataset, reviewed under docs/DATA.md
+    url: https://github.com/metacareforyou/metacare-small-model
+    licence: Apache-2.0
+    retrieved_on: 2026-11-09
+    notes: Written for training; no person's own health information.

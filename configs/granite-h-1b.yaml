@@ -1,0 +1,43 @@
+# The quality candidate: about 1.0 GB at q4. It does not fit an iPhone today (limit 600 MB) and a single 1 GB file
+# was refused by Chrome on a test Mac, so it needs a smaller quantization or a split file before it can ship.
+name: granite-h-1b-health-v0
+
+base:
+  repo: ibm-granite/granite-4.0-h-1b
+  revision: d18cca4c121edb87d022116d281ce212c9136f57   # read from the Hugging Face API, 2026-11-09
+  licence: Apache-2.0
+  model_type: granitemoehybrid   # hybrid Mamba2 and attention: export at q4, never q4f16
+  published_onnx: onnx-community/granite-4.0-h-1b-ONNX@ca08f6f525ee61e1f75fd9b2686464eea0a713ce
+
+data:
+  train: data/train.jsonl
+  sources: data/sources.yaml
+
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: all-linear
+
+training:
+  epochs: 3
+  learning_rate: 2.0e-4
+  batch_size: 4
+  gradient_accumulation: 4
+  max_length: 1024
+  bf16: true
+  seed: 42
+  output_dir: runs/granite-h-1b-health-v0
+
+export:
+  dtype: q4
+
+manifest:
+  repo: metacareforyou/granite-4.0-h-1b-health-ONNX   # the Hugging Face repository the weights are published to; not created yet
+  license: Apache 2.0
+  cache_name: metacare-localai-chat-granite-h-1b-health-v0
+  disclosure:
+    name: MetaCare Health 1B (Granite 4.0 H 1B, fine tuned)
+    maker: MetaCare, from IBM Granite
+    license: Apache 2.0
+    url: https://github.com/metacareforyou/metacare-small-model
