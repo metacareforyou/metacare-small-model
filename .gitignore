@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+runs/
+artifacts/
+*.safetensors
+*.onnx
+*.onnx_data
+*.bin
+*.pt
+data/raw/
+data/private/
+.DS_Store
+.env
