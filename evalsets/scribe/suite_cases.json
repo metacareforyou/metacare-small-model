@@ -1,0 +1,1087 @@
+{
+ "version": 1,
+ "voices": "ElevenLabs stock voices, model eleven_multilingual_v2; never the founder voice",
+ "cases": [
+  {
+   "id": "diabetes",
+   "title": "Diabetes follow up",
+   "tests": "The first test visit, read by two natural voices in a quiet exam room.",
+   "speakers": {
+    "D": {
+     "name": "Doctor",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    },
+    "P": {
+     "name": "Patient",
+     "voice": "nPczCjzI2devNBz1zQrb"
+    }
+   },
+   "scene": {
+    "noise": "pink",
+    "noiseDb": -42,
+    "room": "exam"
+   },
+   "lines": [
+    {
+     "s": "D",
+     "t": "Good morning. What brings you in today?"
+    },
+    {
+     "s": "P",
+     "t": "My blood sugar has been running high, and I have been more tired than usual for about three weeks."
+    },
+    {
+     "s": "D",
+     "t": "Your hemoglobin A1C came back at eight point two percent, up from seven point one in March."
+    },
+    {
+     "s": "P",
+     "t": "Is that bad?"
+    },
+    {
+     "s": "D",
+     "t": "It means your diabetes is not well controlled. I want to increase your metformin from five hundred milligrams twice a day to one thousand milligrams twice a day."
+    },
+    {
+     "s": "P",
+     "t": "Okay. Will that upset my stomach again?"
+    },
+    {
+     "s": "D",
+     "t": "It can. Take it with food. If the nausea is bad, call us and we can switch you to the extended release form."
+    },
+    {
+     "s": "D",
+     "t": "I am also starting you on empagliflozin, ten milligrams once a day in the morning. It helps your kidneys and your heart as well as your sugar."
+    },
+    {
+     "s": "P",
+     "t": "I already take lisinopril and atorvastatin. Is that okay together?"
+    },
+    {
+     "s": "D",
+     "t": "Yes. Keep the lisinopril at twenty milligrams daily and the atorvastatin at forty milligrams at bedtime."
+    },
+    {
+     "s": "D",
+     "t": "Your blood pressure today is one hundred forty two over eighty eight, which is a little high."
+    },
+    {
+     "s": "D",
+     "t": "Your eGFR is sixty four and your potassium is four point eight, so we will recheck a basic metabolic panel in two weeks."
+    },
+    {
+     "s": "P",
+     "t": "Do I need to fast for that?"
+    },
+    {
+     "s": "D",
+     "t": "No fasting needed. I am also sending a referral to ophthalmology for a diabetic eye exam, and to podiatry because of the numbness in your feet."
+    },
+    {
+     "s": "P",
+     "t": "The numbness is worse at night."
+    },
+    {
+     "s": "D",
+     "t": "That sounds like peripheral neuropathy. If it keeps you awake, we can try gabapentin, three hundred milligrams at bedtime."
+    },
+    {
+     "s": "D",
+     "t": "Please stop the ibuprofen. With your kidneys, use acetaminophen instead, no more than three thousand milligrams a day."
+    },
+    {
+     "s": "P",
+     "t": "What about my flu shot?"
+    },
+    {
+     "s": "D",
+     "t": "We will give you the influenza vaccine today, and you are due for the pneumococcal vaccine too."
+    },
+    {
+     "s": "D",
+     "t": "Come back in three months, and we will repeat the A1C then."
+    },
+    {
+     "s": "P",
+     "t": "Thank you, doctor."
+    }
+   ],
+   "facts": [
+    [
+     "A1C 8.2",
+     "8\\.2|eight point two"
+    ],
+    [
+     "prior A1C 7.1",
+     "7\\.1|seven point one"
+    ],
+    [
+     "metformin",
+     "metformin"
+    ],
+    [
+     "metformin 500",
+     "\\b500 ?(mg|m\\b|milligram)|five hundred"
+    ],
+    [
+     "metformin 1000",
+     "1,?000 ?(mg|milligram)|one thousand"
+    ],
+    [
+     "twice a day",
+     "twice a day"
+    ],
+    [
+     "extended release",
+     "extended.release"
+    ],
+    [
+     "empagliflozin",
+     "empagliflozin"
+    ],
+    [
+     "empagliflozin 10 mg",
+     "\\b10 ?(mg|milligram)|ten milligram"
+    ],
+    [
+     "lisinopril",
+     "lisinopril"
+    ],
+    [
+     "lisinopril 20",
+     "\\b20 ?(mg|milligram)|twenty milligram"
+    ],
+    [
+     "atorvastatin",
+     "atorvastatin"
+    ],
+    [
+     "atorvastatin 40",
+     "\\b40 ?(mg|milligram)|forty milligram"
+    ],
+    [
+     "blood pressure 142",
+     "\\b142\\b|one hundred (and )?forty.two"
+    ],
+    [
+     "blood pressure 88",
+     "\\b88\\b|eighty.eight"
+    ],
+    [
+     "eGFR",
+     "\\be ?gfr\\b"
+    ],
+    [
+     "eGFR 64",
+     "\\b64\\b|sixty.four"
+    ],
+    [
+     "potassium",
+     "potassium"
+    ],
+    [
+     "potassium 4.8",
+     "4\\.8|four point eight"
+    ],
+    [
+     "basic metabolic panel",
+     "basic metabolic panel"
+    ],
+    [
+     "recheck in two weeks",
+     "two weeks|2 weeks"
+    ],
+    [
+     "ophthalmology",
+     "ophthalmolog"
+    ],
+    [
+     "podiatry",
+     "podiatr"
+    ],
+    [
+     "numbness in the feet",
+     "numbness in your feet"
+    ],
+    [
+     "peripheral neuropathy",
+     "peripheral neuropathy"
+    ],
+    [
+     "gabapentin",
+     "gabapentin"
+    ],
+    [
+     "gabapentin 300",
+     "\\b300 ?(mg|milligram)|three hundred"
+    ],
+    [
+     "stop ibuprofen",
+     "ibuprofen"
+    ],
+    [
+     "acetaminophen",
+     "acetaminophen"
+    ],
+    [
+     "acetaminophen 3000",
+     "3,?000 ?(mg|milligram)|three thousand"
+    ],
+    [
+     "pneumococcal vaccine",
+     "pneumococcal"
+    ]
+   ]
+  },
+  {
+   "id": "heart-failure",
+   "title": "Heart failure, daughter in the room",
+   "tests": "Three speakers, an older voice, a British accent, and the daughter talking over her father twice.",
+   "speakers": {
+    "D": {
+     "name": "Doctor",
+     "voice": "Xb7hH8MSUJpSbSDYk0k2"
+    },
+    "P": {
+     "name": "Patient",
+     "voice": "pqHfZKP75CvOlQylNhV4"
+    },
+    "F": {
+     "name": "Daughter",
+     "voice": "cgSgspJ2msm6clMCkdW9"
+    }
+   },
+   "scene": {
+    "noise": "pink",
+    "noiseDb": -40,
+    "room": "exam"
+   },
+   "lines": [
+    {
+     "s": "D",
+     "t": "Hello again, Mister Alvarez. I see your daughter came with you today. How have you been feeling?"
+    },
+    {
+     "s": "P",
+     "t": "Not great. My ankles are swollen and I get short of breath going up the stairs."
+    },
+    {
+     "s": "F",
+     "t": "He gained four pounds in three days. I write his weight down every morning.",
+     "overlap": 0.6
+    },
+    {
+     "s": "D",
+     "t": "That is really helpful, thank you. Four pounds in three days usually means fluid. Your last echocardiogram showed an ejection fraction of thirty five percent."
+    },
+    {
+     "s": "P",
+     "t": "Is that why I am so tired?"
+    },
+    {
+     "s": "D",
+     "t": "Partly, yes. I want to increase your furosemide from forty milligrams once a day to forty milligrams twice a day for the next week."
+    },
+    {
+     "s": "F",
+     "t": "Twice a day? He already gets up at night to use the bathroom.",
+     "overlap": 0.9
+    },
+    {
+     "s": "D",
+     "t": "Take the second dose in the early afternoon, not at bedtime, and that should help."
+    },
+    {
+     "s": "D",
+     "t": "Keep the metoprolol succinate at twenty five milligrams daily, and continue the sacubitril valsartan, twenty four twenty six milligrams twice a day."
+    },
+    {
+     "s": "P",
+     "t": "And the blood thinner?"
+    },
+    {
+     "s": "D",
+     "t": "Yes, keep taking apixaban, five milligrams twice a day, for the atrial fibrillation. Do not skip doses."
+    },
+    {
+     "s": "D",
+     "t": "Your potassium was five point one, a little high, so please avoid salt substitutes, because they are made of potassium."
+    },
+    {
+     "s": "F",
+     "t": "What about salt? He loves soup."
+    },
+    {
+     "s": "D",
+     "t": "Keep sodium under two thousand milligrams a day. Canned soup is one of the worst offenders."
+    },
+    {
+     "s": "D",
+     "t": "Weigh yourself every morning. If you gain more than three pounds in a day or five pounds in a week, call us right away."
+    },
+    {
+     "s": "D",
+     "t": "I am also referring you to cardiac rehabilitation, and I want to see you back in two weeks with a basic metabolic panel."
+    },
+    {
+     "s": "P",
+     "t": "Okay. Thank you, doctor."
+    }
+   ],
+   "facts": [
+    [
+     "four pounds in three days",
+     "four pounds|4 pounds|4 lb"
+    ],
+    [
+     "ejection fraction",
+     "ejection fraction"
+    ],
+    [
+     "ejection fraction 35",
+     "\\b35\\b|thirty.five"
+    ],
+    [
+     "furosemide",
+     "furosemide"
+    ],
+    [
+     "furosemide 40",
+     "\\b40 ?(mg|milligram)|forty milligram"
+    ],
+    [
+     "twice a day",
+     "twice a day"
+    ],
+    [
+     "afternoon dose",
+     "afternoon"
+    ],
+    [
+     "metoprolol succinate",
+     "metoprolol"
+    ],
+    [
+     "metoprolol 25",
+     "\\b25 ?(mg|milligram)|twenty.five milligram"
+    ],
+    [
+     "sacubitril valsartan",
+     "sacubitril"
+    ],
+    [
+     "24/26",
+     "24.{0,3}26|twenty.four.{0,5}twenty.six"
+    ],
+    [
+     "apixaban",
+     "apixaban"
+    ],
+    [
+     "apixaban 5",
+     "\\b5 ?(mg|milligram)|five milligram"
+    ],
+    [
+     "atrial fibrillation",
+     "atrial fibrillation|a.?fib"
+    ],
+    [
+     "potassium 5.1",
+     "5\\.1|five point one"
+    ],
+    [
+     "salt substitutes",
+     "salt substitute"
+    ],
+    [
+     "sodium 2000",
+     "2,?000 ?(mg|milligram)|two thousand"
+    ],
+    [
+     "three pounds a day",
+     "three pounds|3 pounds"
+    ],
+    [
+     "five pounds a week",
+     "five pounds|5 pounds"
+    ],
+    [
+     "cardiac rehabilitation",
+     "cardiac rehab"
+    ],
+    [
+     "two weeks",
+     "two weeks|2 weeks"
+    ],
+    [
+     "basic metabolic panel",
+     "basic metabolic panel"
+    ]
+   ]
+  },
+  {
+   "id": "ear-infection",
+   "title": "Child with an ear infection, TV on",
+   "tests": "An Australian accent, a fast worried parent, and a television talking in the background.",
+   "speakers": {
+    "D": {
+     "name": "Doctor",
+     "voice": "IKne3meq5aSn9XLyUdCD"
+    },
+    "P": {
+     "name": "Parent",
+     "voice": "EXAVITQu4vr4xnSDxMaL",
+     "speed": 1.08
+    }
+   },
+   "scene": {
+    "noise": "pink",
+    "noiseDb": -38,
+    "room": "exam",
+    "tv": {
+     "voice": "JBFqnCBsd6RMkjVDRZzb",
+     "db": -17,
+     "text": "In tonight's news, the city council approved a new budget for road repairs, and forecasters expect rain across the region by Thursday. Traffic on the main bridge remains slow after this morning's accident. In sports, the home team won its third game in a row, with a late goal in the final minute. Stay with us after the break for the weekend weather and a look at the new library opening downtown. Gas prices fell again this week, and the farmers market returns on Saturday with more vendors than last year."
+    }
+   },
+   "lines": [
+    {
+     "s": "D",
+     "t": "G'day. So what is going on with this little one?"
+    },
+    {
+     "s": "P",
+     "t": "She has been pulling at her right ear for two days, and last night her fever was one hundred two point four. She barely slept."
+    },
+    {
+     "s": "D",
+     "t": "Okay, let me have a look. Yes, the right eardrum is red and bulging. That is an ear infection, otitis media."
+    },
+    {
+     "s": "P",
+     "t": "Does she need antibiotics? She had amoxicillin last winter and it was fine."
+    },
+    {
+     "s": "D",
+     "t": "Good, so no allergy to penicillin. She weighs eighteen kilograms today, so I will prescribe amoxicillin, four hundred milligrams per five milliliters, seven point five milliliters twice a day for ten days."
+    },
+    {
+     "s": "P",
+     "t": "Seven point five, twice a day, ten days.",
+     "overlap": 0.3
+    },
+    {
+     "s": "D",
+     "t": "That is right. Finish the whole course even when she feels better."
+    },
+    {
+     "s": "D",
+     "t": "For the fever and pain you can give children's ibuprofen, one hundred milligrams per five milliliters, eight milliliters every six hours with food."
+    },
+    {
+     "s": "P",
+     "t": "Can I give Tylenol too?"
+    },
+    {
+     "s": "D",
+     "t": "Yes, acetaminophen is fine in between, but not more than five doses in a day."
+    },
+    {
+     "s": "D",
+     "t": "If the fever is still there after forty eight hours on the antibiotic, bring her back."
+    },
+    {
+     "s": "P",
+     "t": "This is her fourth ear infection this year."
+    },
+    {
+     "s": "D",
+     "t": "If she has one more in the next six months, I will refer you to an ear, nose and throat specialist to talk about ear tubes."
+    },
+    {
+     "s": "P",
+     "t": "Okay. Thank you so much."
+    }
+   ],
+   "facts": [
+    [
+     "right ear",
+     "right ear"
+    ],
+    [
+     "two days",
+     "two days|2 days"
+    ],
+    [
+     "fever 102.4",
+     "102\\.4|one hundred (and )?two point four"
+    ],
+    [
+     "otitis media",
+     "otitis media"
+    ],
+    [
+     "amoxicillin",
+     "amoxicillin"
+    ],
+    [
+     "penicillin allergy",
+     "penicillin"
+    ],
+    [
+     "18 kilograms",
+     "\\b18\\b|eighteen"
+    ],
+    [
+     "400 mg per 5 mL",
+     "\\b400 ?(mg|milligram)|four hundred"
+    ],
+    [
+     "7.5 mL",
+     "7\\.5|seven point five"
+    ],
+    [
+     "ten days",
+     "ten days|10 days"
+    ],
+    [
+     "finish the course",
+     "whole course|entire course"
+    ],
+    [
+     "ibuprofen",
+     "ibuprofen"
+    ],
+    [
+     "ibuprofen 100 mg per 5 mL",
+     "\\b100 ?(mg|milligram)|one hundred milligram"
+    ],
+    [
+     "8 mL",
+     "\\b8 ?(ml|milliliter)|eight milliliter"
+    ],
+    [
+     "every six hours",
+     "every six hours|every 6 hours"
+    ],
+    [
+     "acetaminophen",
+     "acetaminophen|tylenol"
+    ],
+    [
+     "five doses a day",
+     "five doses|5 doses"
+    ],
+    [
+     "48 hours",
+     "\\b48\\b|forty.eight"
+    ],
+    [
+     "ear, nose and throat",
+     "ear,? nose,? and throat|\bent\b"
+    ],
+    [
+     "ear tubes",
+     "ear tubes"
+    ]
+   ]
+  },
+  {
+   "id": "telehealth",
+   "title": "Telehealth call about depression",
+   "tests": "One clear voice and one phone quality voice, quiet and slow, about mental health.",
+   "speakers": {
+    "D": {
+     "name": "Doctor",
+     "voice": "XrExE9yKIg1WjnnlVkGX"
+    },
+    "P": {
+     "name": "Patient",
+     "voice": "iP95p4xoKVk53GoZ742B",
+     "speed": 0.92,
+     "phone": true
+    }
+   },
+   "scene": {
+    "noise": "none",
+    "room": "dry"
+   },
+   "lines": [
+    {
+     "s": "D",
+     "t": "Hi, can you hear me okay? Good. It has been six weeks since we started the sertraline. How are things?"
+    },
+    {
+     "s": "P",
+     "t": "A little better, I think. I am sleeping a bit more, but I still do not want to do much."
+    },
+    {
+     "s": "D",
+     "t": "Your PHQ nine score today is fourteen, down from nineteen. That is real progress, but you are still in the moderate range."
+    },
+    {
+     "s": "P",
+     "t": "Is there anything I should watch for?"
+    },
+    {
+     "s": "D",
+     "t": "Side effects. Any nausea, headaches, or changes in sex drive?"
+    },
+    {
+     "s": "P",
+     "t": "Some nausea the first two weeks. It is gone now."
+    },
+    {
+     "s": "D",
+     "t": "Good. I would like to increase the sertraline from fifty milligrams to one hundred milligrams, once a day in the morning."
+    },
+    {
+     "s": "P",
+     "t": "Okay. And the sleep?"
+    },
+    {
+     "s": "D",
+     "t": "You can keep the trazodone, fifty milligrams at bedtime, as needed. Please do not drink alcohol with it."
+    },
+    {
+     "s": "D",
+     "t": "Do not stop the sertraline suddenly, even if you feel better. We will lower it slowly when it is time."
+    },
+    {
+     "s": "D",
+     "t": "I am also sending a referral for cognitive behavioral therapy. The combination works better than medicine alone."
+    },
+    {
+     "s": "P",
+     "t": "I have had some dark thoughts, but I would not act on them."
+    },
+    {
+     "s": "D",
+     "t": "Thank you for telling me. If those thoughts get stronger, call or text nine eight eight any time, day or night, or go to the nearest emergency room."
+    },
+    {
+     "s": "D",
+     "t": "Let us talk again in four weeks."
+    },
+    {
+     "s": "P",
+     "t": "Okay. Thanks."
+    }
+   ],
+   "facts": [
+    [
+     "sertraline",
+     "sertraline"
+    ],
+    [
+     "six weeks",
+     "six weeks|6 weeks"
+    ],
+    [
+     "PHQ-9",
+     "phq"
+    ],
+    [
+     "score 14",
+     "\\b14\\b|fourteen"
+    ],
+    [
+     "from 19",
+     "\\b19\\b|nineteen"
+    ],
+    [
+     "moderate",
+     "moderate"
+    ],
+    [
+     "nausea",
+     "nausea"
+    ],
+    [
+     "sertraline 50",
+     "\\b50 ?(mg|milligram)|fifty milligram"
+    ],
+    [
+     "sertraline 100",
+     "\\b100 ?(mg|milligram)|one hundred milligram"
+    ],
+    [
+     "in the morning",
+     "morning"
+    ],
+    [
+     "trazodone",
+     "trazodone"
+    ],
+    [
+     "at bedtime",
+     "bedtime"
+    ],
+    [
+     "no alcohol",
+     "alcohol"
+    ],
+    [
+     "do not stop suddenly",
+     "suddenly"
+    ],
+    [
+     "cognitive behavioral therapy",
+     "cognitive behavio"
+    ],
+    [
+     "988",
+     "\\b988\\b|nine.eight.eight"
+    ],
+    [
+     "emergency room",
+     "emergency"
+    ],
+    [
+     "four weeks",
+     "four weeks|4 weeks"
+    ]
+   ]
+  },
+  {
+   "id": "knee-surgery",
+   "title": "After knee surgery, lots of interrupting",
+   "tests": "A fast talker, a British doctor, and five places where they talk over each other.",
+   "speakers": {
+    "D": {
+     "name": "Doctor",
+     "voice": "onwK4e9ZLuTAKqWW03F9"
+    },
+    "P": {
+     "name": "Patient",
+     "voice": "TX3LPaxmHKxFdv7VOQHJ",
+     "speed": 1.15
+    }
+   },
+   "scene": {
+    "noise": "pink",
+    "noiseDb": -40,
+    "room": "exam"
+   },
+   "lines": [
+    {
+     "s": "D",
+     "t": "So, ten days after your knee replacement. How is the pain?"
+    },
+    {
+     "s": "P",
+     "t": "Honestly it is way better than I expected, I have been walking to the mailbox, I did the stairs yesterday, and I only took the pain pill twice—"
+    },
+    {
+     "s": "D",
+     "t": "That is excellent. The oxycodone, five milligrams?",
+     "overlap": 0.7
+    },
+    {
+     "s": "P",
+     "t": "Yeah, the five milligram ones, every six hours at first, now just at night really."
+    },
+    {
+     "s": "D",
+     "t": "Good. Let us taper it off over the next week and use acetaminophen during the day."
+    },
+    {
+     "s": "P",
+     "t": "And the shots in my stomach, do I keep doing those, because they leave bruises—"
+    },
+    {
+     "s": "D",
+     "t": "The enoxaparin, yes. Forty milligrams once a day until day fourteen.",
+     "overlap": 0.9
+    },
+    {
+     "s": "D",
+     "t": "After that you switch to aspirin, eighty one milligrams twice a day, for four more weeks."
+    },
+    {
+     "s": "P",
+     "t": "Okay, aspirin twice a day, got it. When do the staples come out?"
+    },
+    {
+     "s": "D",
+     "t": "At day fourteen, here in the clinic. Your range of motion is ninety degrees, which is right on track."
+    },
+    {
+     "s": "P",
+     "t": "Physical therapy wants me three times a week, is that too much, because my wife has to drive me—"
+    },
+    {
+     "s": "D",
+     "t": "Three times a week is exactly right for the first six weeks.",
+     "overlap": 0.6
+    },
+    {
+     "s": "D",
+     "t": "Ice for twenty minutes after each session, and keep the leg up."
+    },
+    {
+     "s": "D",
+     "t": "Call us right away if you get calf pain or swelling, chest pain, a temperature over one hundred one, or redness around the incision."
+    },
+    {
+     "s": "P",
+     "t": "Calf pain, chest pain, fever, redness. Got it, thanks doc.",
+     "overlap": 0.4
+    }
+   ],
+   "facts": [
+    [
+     "ten days",
+     "ten days|10 days"
+    ],
+    [
+     "knee replacement",
+     "knee replacement"
+    ],
+    [
+     "oxycodone",
+     "oxycodone"
+    ],
+    [
+     "oxycodone 5 mg",
+     "\\b5 ?(mg|milligram)|five milligram"
+    ],
+    [
+     "every six hours",
+     "every six hours|every 6 hours"
+    ],
+    [
+     "taper",
+     "taper"
+    ],
+    [
+     "acetaminophen",
+     "acetaminophen"
+    ],
+    [
+     "enoxaparin",
+     "enoxaparin"
+    ],
+    [
+     "enoxaparin 40",
+     "\\b40 ?(mg|milligram)|forty milligram"
+    ],
+    [
+     "day 14",
+     "day (14|fourteen)"
+    ],
+    [
+     "aspirin",
+     "aspirin"
+    ],
+    [
+     "aspirin 81",
+     "\\b81\\b|eighty.one"
+    ],
+    [
+     "four more weeks",
+     "four (more )?weeks|4 (more )?weeks"
+    ],
+    [
+     "staples",
+     "staples"
+    ],
+    [
+     "90 degrees",
+     "\\b90\\b|ninety"
+    ],
+    [
+     "three times a week",
+     "three times a week|3 times a week"
+    ],
+    [
+     "ice 20 minutes",
+     "twenty minutes|20 minutes"
+    ],
+    [
+     "calf pain",
+     "calf"
+    ],
+    [
+     "chest pain",
+     "chest pain"
+    ],
+    [
+     "temperature over 101",
+     "\\b101\\b|one hundred (and )?one"
+    ],
+    [
+     "incision",
+     "incision"
+    ]
+   ]
+  },
+  {
+   "id": "thyroid",
+   "title": "Thyroid and bones, quiet patient, fan running",
+   "tests": "A quiet patient far from the phone, a fan running, and doses in micrograms.",
+   "speakers": {
+    "D": {
+     "name": "Doctor",
+     "voice": "hpp4J3VqNfWAUOO0d1Us"
+    },
+    "P": {
+     "name": "Patient",
+     "voice": "pFZP5JQG7iQjIQuC4Bku",
+     "speed": 0.95,
+     "far": true
+    }
+   },
+   "scene": {
+    "noise": "brown",
+    "noiseDb": -30,
+    "room": "exam"
+   },
+   "lines": [
+    {
+     "s": "D",
+     "t": "Good afternoon. I have your results from last week."
+    },
+    {
+     "s": "P",
+     "t": "I have been so tired, and cold all the time."
+    },
+    {
+     "s": "D",
+     "t": "That fits. Your TSH is six point two, which means your thyroid dose is a little low."
+    },
+    {
+     "s": "D",
+     "t": "I want to increase the levothyroxine from eighty eight micrograms to one hundred micrograms a day."
+    },
+    {
+     "s": "P",
+     "t": "Do I take it the same way?"
+    },
+    {
+     "s": "D",
+     "t": "Yes. On an empty stomach, with water, thirty minutes before breakfast. Keep your calcium at least four hours apart from it."
+    },
+    {
+     "s": "D",
+     "t": "We will recheck the TSH in six weeks."
+    },
+    {
+     "s": "D",
+     "t": "Your bone density scan, the DEXA, showed a T score of minus two point six at the hip. That is osteoporosis."
+    },
+    {
+     "s": "P",
+     "t": "My mother broke her hip at seventy."
+    },
+    {
+     "s": "D",
+     "t": "That is part of why I want to treat it. I am starting alendronate, seventy milligrams once a week."
+    },
+    {
+     "s": "D",
+     "t": "Take it first thing in the morning with a full glass of water, and stay sitting or standing upright for thirty minutes."
+    },
+    {
+     "s": "D",
+     "t": "Also take vitamin D, two thousand units a day, and get about twelve hundred milligrams of calcium a day, from food first."
+    },
+    {
+     "s": "P",
+     "t": "Should I still walk every day?"
+    },
+    {
+     "s": "D",
+     "t": "Yes, walking and light weights are good for your bones. And you are due for your mammogram, so I put that order in too."
+    },
+    {
+     "s": "P",
+     "t": "Thank you."
+    }
+   ],
+   "facts": [
+    [
+     "TSH",
+     "\\btsh\\b"
+    ],
+    [
+     "TSH 6.2",
+     "6\\.2|six point two"
+    ],
+    [
+     "levothyroxine",
+     "levothyroxine"
+    ],
+    [
+     "88 micrograms",
+     "\\b88\\b|eighty.eight"
+    ],
+    [
+     "100 micrograms",
+     "\\b100 ?(mcg|microgram)|one hundred microgram"
+    ],
+    [
+     "empty stomach",
+     "empty stomach"
+    ],
+    [
+     "thirty minutes before breakfast",
+     "thirty minutes|30 minutes"
+    ],
+    [
+     "calcium four hours apart",
+     "four hours|4 hours"
+    ],
+    [
+     "six weeks",
+     "six weeks|6 weeks"
+    ],
+    [
+     "DEXA",
+     "dexa|dexa"
+    ],
+    [
+     "T score -2.6",
+     "2\\.6|two point six"
+    ],
+    [
+     "osteoporosis",
+     "osteoporosis"
+    ],
+    [
+     "alendronate",
+     "alendronate"
+    ],
+    [
+     "alendronate 70",
+     "\\b70 ?(mg|milligram)|seventy milligram"
+    ],
+    [
+     "once a week",
+     "once a week"
+    ],
+    [
+     "upright",
+     "upright"
+    ],
+    [
+     "vitamin D",
+     "vitamin d"
+    ],
+    [
+     "2000 units",
+     "2,?000 (units|iu)|two thousand units"
+    ],
+    [
+     "calcium 1200",
+     "1,?200 ?(mg|milligram)|twelve hundred"
+    ],
+    [
+     "mammogram",
+     "mammogram"
+    ]
+   ]
+  }
+ ]
+}
