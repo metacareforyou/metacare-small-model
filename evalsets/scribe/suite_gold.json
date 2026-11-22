@@ -1,0 +1,729 @@
+{
+  "about": "Right answers for the six visit scribe test visits (MET-1928). The visits, their lines and recordings are the metacare-gpt-frontend suite (src/pages/labs/scribe/suite/cases.json, version below); line numbers count that file's lines from 1. Written by hand from the lines, in the extraction format and wording of the training data (scribe/pairs.py). Things said only as a possibility (\"if it keeps you awake, we can try\") are included when a dose is given, since a scribe should capture them for the clinician to confirm. seen_type marks visits whose kind of visit is also a training template, so their scores are reported apart from the held out kinds.",
+  "suite_version": 1,
+  "cases": {
+    "diabetes": {
+      "seen_type": true,
+      "items": [
+        {
+          "kind": "observation",
+          "name": "hemoglobin A1C",
+          "value": "8.2",
+          "unit": "percent",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "kind": "observation",
+          "name": "previous A1C",
+          "value": "7.1",
+          "unit": "percent",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "kind": "condition",
+          "name": "diabetes",
+          "lines": [
+            5
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "metformin",
+          "dose": "1000",
+          "unit": "mg",
+          "frequency": "twice a day",
+          "route": "by mouth",
+          "action": "increase",
+          "lines": [
+            5
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "take the metformin with food",
+          "lines": [
+            7
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "call if the nausea is bad, and the metformin can be switched to extended release",
+          "lines": [
+            7
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "empagliflozin",
+          "dose": "10",
+          "unit": "mg",
+          "frequency": "every morning",
+          "route": "by mouth",
+          "action": "start",
+          "lines": [
+            8
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "lisinopril",
+          "dose": "20",
+          "unit": "mg",
+          "frequency": "once a day",
+          "route": "by mouth",
+          "action": "continue",
+          "lines": [
+            9,
+            10
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "atorvastatin",
+          "dose": "40",
+          "unit": "mg",
+          "frequency": "at bedtime",
+          "route": "by mouth",
+          "action": "continue",
+          "lines": [
+            9,
+            10
+          ]
+        },
+        {
+          "kind": "observation",
+          "name": "blood pressure",
+          "value": "142/88",
+          "lines": [
+            11
+          ]
+        },
+        {
+          "kind": "observation",
+          "name": "eGFR",
+          "value": "64",
+          "lines": [
+            12
+          ]
+        },
+        {
+          "kind": "observation",
+          "name": "potassium",
+          "value": "4.8",
+          "lines": [
+            12
+          ]
+        },
+        {
+          "kind": "order",
+          "name": "basic metabolic panel in two weeks",
+          "lines": [
+            12
+          ]
+        },
+        {
+          "kind": "order",
+          "name": "ophthalmology referral for a diabetic eye exam",
+          "lines": [
+            14
+          ]
+        },
+        {
+          "kind": "order",
+          "name": "podiatry referral",
+          "lines": [
+            14
+          ]
+        },
+        {
+          "kind": "condition",
+          "name": "peripheral neuropathy",
+          "lines": [
+            16
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "gabapentin",
+          "dose": "300",
+          "unit": "mg",
+          "frequency": "at bedtime",
+          "route": "by mouth",
+          "action": "start",
+          "lines": [
+            16
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "ibuprofen",
+          "action": "stop",
+          "lines": [
+            17
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "acetaminophen",
+          "action": "start",
+          "lines": [
+            17
+          ]
+        },
+        {
+          "kind": "immunization",
+          "name": "influenza vaccine",
+          "lines": [
+            19
+          ]
+        },
+        {
+          "kind": "immunization",
+          "name": "pneumococcal vaccine",
+          "lines": [
+            19
+          ]
+        },
+        {
+          "kind": "order",
+          "name": "A1C again in three months",
+          "lines": [
+            20
+          ]
+        },
+        {
+          "kind": "follow_up",
+          "when": "three months",
+          "lines": [
+            20
+          ]
+        }
+      ]
+    },
+    "heart-failure": {
+      "seen_type": true,
+      "items": [
+        {
+          "kind": "observation",
+          "name": "weight gain",
+          "value": "4",
+          "unit": "pounds in three days",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "kind": "observation",
+          "name": "ejection fraction",
+          "value": "35",
+          "unit": "percent",
+          "lines": [
+            4
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "furosemide",
+          "dose": "40",
+          "unit": "mg",
+          "frequency": "twice a day",
+          "route": "by mouth",
+          "action": "increase",
+          "duration": "one week",
+          "lines": [
+            6
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "take the second furosemide dose in the early afternoon, not at bedtime",
+          "lines": [
+            8
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "metoprolol succinate",
+          "dose": "25",
+          "unit": "mg",
+          "frequency": "once a day",
+          "route": "by mouth",
+          "action": "continue",
+          "lines": [
+            9
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "sacubitril valsartan",
+          "dose": "24/26",
+          "unit": "mg",
+          "frequency": "twice a day",
+          "route": "by mouth",
+          "action": "continue",
+          "lines": [
+            9
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "apixaban",
+          "dose": "5",
+          "unit": "mg",
+          "frequency": "twice a day",
+          "route": "by mouth",
+          "action": "continue",
+          "reason": "atrial fibrillation",
+          "lines": [
+            11
+          ]
+        },
+        {
+          "kind": "condition",
+          "name": "atrial fibrillation",
+          "lines": [
+            11
+          ]
+        },
+        {
+          "kind": "observation",
+          "name": "potassium",
+          "value": "5.1",
+          "lines": [
+            12
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "avoid salt substitutes",
+          "lines": [
+            12
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "keep sodium under 2000 milligrams a day",
+          "lines": [
+            14
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "weigh every morning and call if weight goes up more than 3 pounds in a day or 5 pounds in a week",
+          "lines": [
+            15
+          ]
+        },
+        {
+          "kind": "order",
+          "name": "cardiac rehabilitation referral",
+          "lines": [
+            16
+          ]
+        },
+        {
+          "kind": "order",
+          "name": "basic metabolic panel",
+          "lines": [
+            16
+          ]
+        },
+        {
+          "kind": "follow_up",
+          "when": "two weeks",
+          "lines": [
+            16
+          ]
+        }
+      ]
+    },
+    "ear-infection": {
+      "seen_type": true,
+      "items": [
+        {
+          "kind": "observation",
+          "name": "temperature",
+          "value": "102.4",
+          "lines": [
+            2
+          ]
+        },
+        {
+          "kind": "condition",
+          "name": "acute otitis media of the right ear",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "kind": "observation",
+          "name": "weight",
+          "value": "18",
+          "unit": "kilograms",
+          "lines": [
+            5
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "amoxicillin 400 mg per 5 mL",
+          "dose": "7.5",
+          "unit": "mL",
+          "frequency": "twice a day",
+          "route": "by mouth",
+          "action": "start",
+          "duration": "10 days",
+          "lines": [
+            5,
+            6
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "finish the whole course of antibiotic",
+          "lines": [
+            7
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "ibuprofen 100 mg per 5 mL",
+          "dose": "8",
+          "unit": "mL",
+          "frequency": "every 6 hours",
+          "route": "by mouth",
+          "action": "start",
+          "reason": "fever and pain",
+          "lines": [
+            8
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "acetaminophen",
+          "action": "start",
+          "frequency": "in between, at most five doses a day",
+          "lines": [
+            9,
+            10
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "come back if the fever lasts more than 48 hours on the antibiotic",
+          "lines": [
+            11
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "ear, nose and throat referral for ear tubes if there is one more ear infection in six months",
+          "lines": [
+            13
+          ]
+        }
+      ]
+    },
+    "telehealth": {
+      "seen_type": true,
+      "items": [
+        {
+          "kind": "medication",
+          "name": "sertraline",
+          "dose": "100",
+          "unit": "mg",
+          "frequency": "every morning",
+          "route": "by mouth",
+          "action": "increase",
+          "lines": [
+            1,
+            7
+          ]
+        },
+        {
+          "kind": "observation",
+          "name": "PHQ 9 score",
+          "value": "14",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "kind": "observation",
+          "name": "previous PHQ 9 score",
+          "value": "19",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "trazodone",
+          "dose": "50",
+          "unit": "mg",
+          "frequency": "at bedtime as needed",
+          "route": "by mouth",
+          "action": "continue",
+          "lines": [
+            9
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "no alcohol with the trazodone",
+          "lines": [
+            9
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "do not stop the sertraline suddenly",
+          "lines": [
+            10
+          ]
+        },
+        {
+          "kind": "order",
+          "name": "referral for cognitive behavioral therapy",
+          "lines": [
+            11
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "call or text 988 or go to the emergency room if those dark thoughts get stronger",
+          "lines": [
+            13
+          ]
+        },
+        {
+          "kind": "follow_up",
+          "when": "four weeks",
+          "lines": [
+            14
+          ]
+        }
+      ]
+    },
+    "knee-surgery": {
+      "seen_type": false,
+      "items": [
+        {
+          "kind": "condition",
+          "name": "ten days after knee replacement",
+          "lines": [
+            1
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "oxycodone",
+          "dose": "5",
+          "unit": "mg",
+          "route": "by mouth",
+          "action": "decrease",
+          "duration": "one week",
+          "frequency": "at night",
+          "lines": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "acetaminophen",
+          "route": "by mouth",
+          "action": "start",
+          "lines": [
+            5
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "enoxaparin",
+          "dose": "40",
+          "unit": "mg",
+          "frequency": "once a day",
+          "route": "by injection",
+          "action": "continue",
+          "duration": "until day 14",
+          "lines": [
+            6,
+            7
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "aspirin",
+          "dose": "81",
+          "unit": "mg",
+          "frequency": "twice a day",
+          "route": "by mouth",
+          "action": "start",
+          "duration": "four weeks",
+          "lines": [
+            8,
+            9
+          ]
+        },
+        {
+          "kind": "order",
+          "name": "staple removal at day 14",
+          "lines": [
+            9,
+            10
+          ]
+        },
+        {
+          "kind": "follow_up",
+          "when": "day 14",
+          "lines": [
+            10
+          ]
+        },
+        {
+          "kind": "observation",
+          "name": "range of motion",
+          "value": "90",
+          "unit": "degrees",
+          "lines": [
+            10
+          ]
+        },
+        {
+          "kind": "order",
+          "name": "physical therapy three times a week",
+          "lines": [
+            11,
+            12
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "ice for 20 minutes after each session and keep the leg up",
+          "lines": [
+            13
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "call for calf pain or swelling, chest pain, a temperature over 101 or redness around the incision",
+          "lines": [
+            14
+          ]
+        }
+      ]
+    },
+    "thyroid": {
+      "seen_type": false,
+      "items": [
+        {
+          "kind": "observation",
+          "name": "TSH",
+          "value": "6.2",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "levothyroxine",
+          "dose": "100",
+          "unit": "mcg",
+          "frequency": "once a day",
+          "route": "by mouth",
+          "action": "increase",
+          "lines": [
+            4
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "take it on an empty stomach with water, thirty minutes before breakfast, and four hours apart from calcium",
+          "lines": [
+            6
+          ]
+        },
+        {
+          "kind": "order",
+          "name": "TSH again in six weeks",
+          "lines": [
+            7
+          ]
+        },
+        {
+          "kind": "observation",
+          "name": "DEXA T score at the hip",
+          "value": "-2.6",
+          "lines": [
+            8
+          ]
+        },
+        {
+          "kind": "condition",
+          "name": "osteoporosis",
+          "lines": [
+            8
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "alendronate",
+          "dose": "70",
+          "unit": "mg",
+          "frequency": "once a week",
+          "route": "by mouth",
+          "action": "start",
+          "lines": [
+            10
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "take the alendronate with a full glass of water and stay upright for thirty minutes",
+          "lines": [
+            11
+          ]
+        },
+        {
+          "kind": "medication",
+          "name": "vitamin D",
+          "dose": "2000",
+          "unit": "units",
+          "frequency": "once a day",
+          "route": "by mouth",
+          "action": "start",
+          "lines": [
+            12
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "about 1200 milligrams of calcium a day, from food first",
+          "lines": [
+            12
+          ]
+        },
+        {
+          "kind": "advice",
+          "text": "walking and light weights",
+          "lines": [
+            14
+          ]
+        },
+        {
+          "kind": "order",
+          "name": "mammogram",
+          "lines": [
+            14
+          ]
+        }
+      ]
+    }
+  }
+}
