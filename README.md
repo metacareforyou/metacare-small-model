@@ -9,7 +9,7 @@ This repository holds the code to make, train, score and export two small models
 [Metacare.ai](https://metacare.ai), both fine tuned from IBM Granite 4.0 H 350M and exported to 4 bit ONNX files that
 run in the browser with Transformers.js:
 
-1. **The visit scribe model.** It reads the transcript of a medical visit and writes down the facts that were said
+1. **MetaCare Ember, the visit scribe.** Its model reads the transcript of a medical visit and writes down the facts that were said
    (medicines and doses, results, problems, orders, advice, follow up) in fixed fields, each with the transcript lines
    it came from. Everything after that (fixing misheard drug names, codes, FHIR) is plain code in the app. English.
 2. **The health question model.** It answers a person's health question in a few plain sentences. English and
@@ -17,7 +17,7 @@ run in the browser with Transformers.js:
 
 Code under Apache 2.0. Weights and evaluation sets will be published openly with model cards when they are ready.
 
-> Status, November 22, 2026: the scribe model's first training run is under way. No trained weights are published
+> Status, November 22, 2026: the Ember model's first training run is under way. No trained weights are published
 > yet and no scores are final. Read [Where things stand](#where-things-stand) before relying on anything.
 
 ---
@@ -26,10 +26,10 @@ Code under Apache 2.0. Weights and evaluation sets will be published openly with
 
 | Piece | State |
 |---|---|
-| Scribe: visit generator, 16 visit types, every fact checked in the script | Built and tested; first run wrote 2,000 visits, 1,870 kept |
-| Scribe: synthetic speech and Whisper transcripts of each visit | Built; first run under way |
-| Scribe: training pairs, LoRA fine tune, scoring by field | Built; first training run under way |
-| Scribe: test suite of six recorded visits, with right answers | Built; transcripts by four Whisper models included |
+| Ember: visit generator, 16 visit types, every fact checked in the script | Built and tested; first run wrote 2,000 visits, 1,870 kept |
+| Ember: synthetic speech and Whisper transcripts of each visit | Built; first run under way |
+| Ember: training pairs, LoRA fine tune, scoring by field | Built; first training run under way |
+| Ember: test suite of six recorded visits, with right answers | Built; transcripts by four Whisper models included |
 | Export of a fine tuned Granite 4.0 H 350M to q4 ONNX | Built and checked on the base model (see [Export](#export-to-the-browser)) |
 | Health model: data rules, emergency filter, prompt check, evaluation runner | Built and tested; never run on a trained model |
 | Health model: training data | Four unreviewed examples only |
@@ -51,7 +51,10 @@ in a web worker and never falls back to a server. The model has to fit a phone's
 
 The iPhone budget the app enforces is 600,000,000 bytes, counting the ONNX Runtime binary.
 
-## The visit scribe model
+## MetaCare Ember: the visit scribe model
+
+Ember records a visit, turns it into text on the device, and drafts the notes, the structured records and the order
+suggestions for a clinician to review and sign. This model is the part that pulls the facts out of the transcript.
 
 ```
  scribe/catalog.py      16 visit types; each made up visit gets a spec: speakers, style, and the facts that must be said
@@ -191,13 +194,13 @@ Full rules in [docs/DATA.md](docs/DATA.md). In short:
 
 ```
 configs/                     one YAML per model: pinned base, LoRA, training, export dtype
-  scribe/                    the scribe model's config
+  scribe/                    the Ember model's config
 data/                        health records, the source register and examples (scribe data stays in data/private/)
 evalsets/health-qa-v0/       the open health evaluation set
-evalsets/scribe/             the six visit test suite: lines, right answers, and Whisper transcripts
+evalsets/scribe/             Ember's six visit test suite: lines, right answers, and Whisper transcripts
 docs/                        data rules, evaluation rubric, model card template, export notes
 src/metacare_small_model/    the msm command and its modules
-  scribe/                    catalog, checks, generate, speech, pairs, finetune, score, suite, export_onnx
+  scribe/                    Ember: catalog, checks, generate, speech, pairs, finetune, score, suite, export_onnx
   records.py, screen.py,     health data rules, personal data screen, emergency filter
   emergency.py
   prompt.py, train.py,       health model prompt, training, evaluation
@@ -209,7 +212,7 @@ tools/scribe-js-smoke/       checks an export with the Transformers.js version t
 
 ## Known unknowns
 
-1. **How well 350M parameters extract a visit.** The first scores will say; the 1B model is the fallback if it falls
+1. **How well 350M parameters extract a visit for Ember.** The first scores will say; the 1B model is the fallback if it falls
    short, but it needs to fit under the phone budget first.
 2. **How fast it runs on phones.** The base 350M model installs on an iPhone and has answered on an iPhone 18;
    time to process a whole visit on a phone has not been measured.
@@ -226,7 +229,7 @@ evaluation items are especially welcome: write to info@metacare.ai.
 Code: [Apache 2.0](LICENSE). Base models: IBM Granite 4.0, Apache 2.0. Each published dataset and model will carry its
 own card and licence.
 
-Nothing in this repository, and no output of a model trained with it, is medical advice, diagnosis or treatment. A
-scribe's notes are drafts for a clinician to review. In an emergency, call 911 or your local emergency number.
+Nothing in this repository, and no output of a model trained with it, is medical advice, diagnosis or treatment. Ember's
+notes are drafts for a clinician to review. In an emergency, call 911 or your local emergency number.
 
 Made by [Metacare.ai Inc.](https://metacare.ai) in Miami, Florida.
